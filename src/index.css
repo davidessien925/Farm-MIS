@@ -1,0 +1,86 @@
+html {
+  font-size: 1rem;
+  box-sizing:border-box;
+}
+
+body {
+  background-image: url('images/hexagons.svg');
+  background-color: #203040FF;
+  color: white;
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+.customgrid-container {
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 1fr 2rem;
+  height: 100%;
+}
+
+#bootstrap-overrides header {
+  grid-area: 'header';
+  background-color: #203040;
+}
+
+#bootstrap-overrides main {
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+  grid-area: 'main';
+  padding: 1rem;
+  background-image: url('images/hexagons.svg');
+  background-color: #203040FF;
+}
+
+#bootstrap-overrides footer {
+  grid-area: 'footer';
+  background-color: #203040;
+  color: #fff;
+}
+
+#bootstrap-overrides a {
+  text-decoration: none;
+}
+
+#bootstrap-overrides a:hover {
+  color: #ff8000;
+}
+
+#bootstrap-overrides header a{
+  color: white;
+  padding: 1rem;
+}
+
+#bootstrap-overrides a.brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.customrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customrow.customcenter {
+  justify-content: center;
+}
+
+main{
+  background-color: #203040FF; 
+}
+
+#bootstrap-overrides main a{
+  color: rgb(22, 22, 22);
+  padding: 1rem;
+}

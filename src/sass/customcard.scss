@@ -1,0 +1,49 @@
+.customcard {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius:0.5rem ;
+    margin:1rem;
+}
+
+.customcard-body {
+    padding: 0.5rem;
+}
+
+/*.customcard-body > * {
+    margin-bottom: 0.5rem;
+}*/
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.light-blue {
+    background-color: rgb(52, 174, 214);
+}
