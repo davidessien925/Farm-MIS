@@ -10,7 +10,7 @@ app.use('/login', (req,res) => {
     });
 });
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.PORT === "production") {
     app.use(express.static("build"));
     app.get("*", (req, res) => {
       res.sendFile(path.resolve("backend",  "build", "index.html"));
