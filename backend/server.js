@@ -10,4 +10,4 @@ app.use('/login', (req,res) => {
     });
 });
 
-app.listen(process.env.PORT || 8080)
+app.listen(process.env.PORT, () => console.log('API is running on http://localhost:8080/'));
