@@ -17,7 +17,7 @@ function Personnel() {
                 <ul> 
                     <p>Number of workers present:</p>
                     <p>Number of workers excused:</p>
-                    <p>Number of workers absent without exception:</p>
+                    <p>Number of workers absent without excuse:</p>
                     <p>Summary:</p>
                 </ul>
             </main>

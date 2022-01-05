@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './../sass/customcard.scss'
+import Link from 'wouter'
 
 function Customcard(props) {
     return(

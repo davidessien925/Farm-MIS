@@ -1,13 +1,23 @@
-//import { useState } from 'react'
-import React from 'react'
 import { useState } from 'react'
-import { Route, Switch} from 'wouter';
+import React from 'react'
+import { Route, Switch, Link} from 'wouter';
+import useToken from '../backend/useToken';
 import Login from './pages/login';
 import Personnel from './pages/personnel'
 import Dashboard from './pages/dashboard';
 
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+}
+
+function getToken() {
+  const tokenString = sessionStorage.getItem('token');
+  const userToken = JSON.parse(tokenString);
+  return userToken?.token
+}
+
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
 
   if(!token) {
     return <Login setToken={setToken} />
