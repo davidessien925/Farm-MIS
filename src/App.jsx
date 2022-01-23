@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import React from 'react'
 import { Route, Switch, Link} from 'wouter';
 import useToken from '../backend/useToken';
 import Login from './pages/login';
-import Personnel from './pages/personnel'
+import Personnel from './pages/personnel';
+import Livestock from './pages/livestock';
 import Dashboard from './pages/dashboard';
 
 function setToken(userToken) {
@@ -30,6 +30,9 @@ function App() {
         </Route>
         <Route path="/personnel">
           <Personnel/>
+        </Route>
+        <Route path="/Livestock">
+          <Livestock/>
         </Route>
       </Switch>
   )

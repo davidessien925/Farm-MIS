@@ -7,7 +7,7 @@ function Dashboard() {
         <div class="customgrid-container" id="bootstrap-overrides">
             <header class='customrow'>
                 <div>
-                    <a class='brand' href="index.html"> Farm Management Information System </a>
+                    <a class='brand' href="/"> Farm Management Information System </a>
                 </div>
                 <div>
                     <a href="#">Logout</a>
