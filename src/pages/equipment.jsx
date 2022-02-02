@@ -3,7 +3,7 @@ import {useState} from 'react'
 import './../sass/personnel.scss'
 import {Form, Button} from 'react-bootstrap'
 
-function Livestock() {
+function Equipment() {
     const [x,setX] = useState(null)
     const [y,setY] = useState(null)
     const [z,setZ] = useState(null)
@@ -43,54 +43,27 @@ function Livestock() {
             </header>
             <main>
                 <ul> 
-                    Number of live birds:
+                    Number of working equipment:
                         {
                             print?
                             <span>{x}</span>
                             :null
                         } <br/><br/>
-                    Number of dead birds: 
+                    Number of faulty equipment: 
                         {
                             print?
                             <span>{y}</span>
                             :null
                         } <br/><br/>
-                    Number of vaccinated birds: 
-                        {
-                            print?
-                            <span>{z}</span>
-                            :null
-                        } <br/>
-                        <br/>
-                    Number of sick birds: 
-                    {
-                        print?
-                        <span>{z}</span>
-                        :null
-                    } <br/>
-                    <br/>
-                    They're {
-                            print?
-                            <span>{x}</span>
-                            :null
-                        } bird(s) present and {
-                            print?
-                            <span>{s}</span>
-                            :null
-                        } bird(s) absent
                 </ul>
                 <div className="edit"> 
                     <Form.Group className="mb-3">
-                        <Form.Label>Input number of live birds</Form.Label>
+                        <Form.Label>Input number of working equipment</Form.Label>
                         <Form.Control onChange={getX} type="int" placeholder="Enter number" />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Input number of dead birds</Form.Label>
+                        <Form.Label>Input number of faulty equipment</Form.Label>
                         <Form.Control onChange={getY} type="int" placeholder="Enter number" />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Input number of vaccinated birds</Form.Label>
-                        <Form.Control onChange={getZ} type="text" placeholder="Enter number" />
                     </Form.Group>
                     
                     <Button onClick={()=>setPrint(true)} variant="primary" type="submit">
@@ -106,4 +79,4 @@ function Livestock() {
     
 }
 
-export default Livestock
+export default Equipment

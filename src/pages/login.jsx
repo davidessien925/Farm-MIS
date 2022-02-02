@@ -4,7 +4,6 @@ import React from 'react'
 import './../sass/login.scss'
 import PropTypes from 'prop-types';
 
-   
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/', {
       method: 'POST',
@@ -33,7 +32,7 @@ function Login({setToken}) {
     return(
         <div className="defcon">
             <div className="overlay d-flex justify-content-center align-items-center">
-                <Form className="rounded p-4 p-sm-3">
+                <Form onSubmit={handleSubmit} className="rounded p-4 p-sm-3">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="text" placeholder="Enter Username" onChange={e => setUserName(e.target.value)}/>
@@ -48,7 +47,7 @@ function Login({setToken}) {
                         <Form.Check type="checkbox" label="Remember Me"/>
                     </Form.Group>
 
-                    <Button onClick={handleSubmit} variant="primary" type="submit">
+                    <Button variant="primary" type="submit">
                         Login
                     </Button>
                 </Form>

@@ -1,10 +1,14 @@
 import React from 'react'
-import { Route, Switch, Link} from 'wouter';
+import { Route, Switch} from 'wouter';
 import useToken from '../backend/useToken';
 import Login from './pages/login';
 import Personnel from './pages/personnel';
+import Equipment from './pages/equipment';
 import Livestock from './pages/livestock';
 import Dashboard from './pages/dashboard';
+import Finances from './pages/finances';
+import Produce from './pages/produce';
+import Medical from './pages/medical';
 
 function setToken(userToken) {
   sessionStorage.setItem('token', JSON.stringify(userToken));
@@ -33,6 +37,18 @@ function App() {
         </Route>
         <Route path="/Livestock">
           <Livestock/>
+        </Route>
+        <Route path="/Equipment">
+          <Equipment/>
+        </Route>
+        <Route path="/Finances">
+          <Finances/>
+        </Route>
+        <Route path="/Produce">
+          <Produce/>
+        </Route>
+        <Route path="/Medical">
+          <Medical/>
         </Route>
       </Switch>
   )
